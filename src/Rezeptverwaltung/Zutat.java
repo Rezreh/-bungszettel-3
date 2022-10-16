@@ -1,3 +1,5 @@
+package Rezeptverwaltung;
+
 public class Zutat {
 
     private String name;

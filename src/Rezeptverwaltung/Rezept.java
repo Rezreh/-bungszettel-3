@@ -1,3 +1,5 @@
+package Rezeptverwaltung;
+
 public class Rezept {
 
     private String name;
@@ -39,8 +41,8 @@ public class Rezept {
         return new Rezept(this.name, newAmount, angepasst);
     }
 
-    /*public Rezept adjust(int people) {
-        Rezept newRecepie = new Rezept(this.name, this.persons, this.ingredients);
+    /*public Rezeptverwaltung.Rezept adjust(int people) {
+        Rezeptverwaltung.Rezept newRecepie = new Rezeptverwaltung.Rezept(this.name, this.persons, this.ingredients);
         double ratio = 0;
         int counter = 0;
         if (this.persons == people) {
@@ -48,15 +50,15 @@ public class Rezept {
             return newRecepie;
         } else if (this.persons < people && people > 0) {
             ratio = Math.round((persons / people *1.0) * 10.0) / 10.0;
-            for (Zutat z : ingredients) {
-                newRecepie.ingredients[counter] = new Zutat(this.ingredients[counter].getName(), (int) (z.getAmount() / ratio));
+            for (Rezeptverwaltung.Zutat z : ingredients) {
+                newRecepie.ingredients[counter] = new Rezeptverwaltung.Zutat(this.ingredients[counter].getName(), (int) (z.getAmount() / ratio));
             }
             newRecepie.printRecipe();
             return newRecepie;
         } else if (this.persons > people && people > 0) {
             ratio = Math.round((persons / people*1.0) * 10.0) / 10.0;
-            for (Zutat z : ingredients) {
-                newRecepie.ingredients[counter] = new Zutat(this.ingredients[counter].getName(), (int) (z.getAmount() / ratio));
+            for (Rezeptverwaltung.Zutat z : ingredients) {
+                newRecepie.ingredients[counter] = new Rezeptverwaltung.Zutat(this.ingredients[counter].getName(), (int) (z.getAmount() / ratio));
             }
             newRecepie.printRecipe();
             return newRecepie;
@@ -67,13 +69,13 @@ public class Rezept {
         }
     }*/
 
- /*   public Rezept adjust(int newAmount) {
-        Zutat[] zutaten = this.ingredients;
+ /*   public Rezeptverwaltung.Rezept adjust(int newAmount) {
+        Rezeptverwaltung.Zutat[] zutaten = this.ingredients;
         for (int i = 0; i < zutaten.length; i++) {
             double interm = (double) this.ingredients[i].getAmount() / (double) this.persons*1.0;
-            zutaten[i] = new Zutat(this.ingredients[i].getName(), (int) (interm * newAmount));
+            zutaten[i] = new Rezeptverwaltung.Zutat(this.ingredients[i].getName(), (int) (interm * newAmount));
         }
-        return new Rezept(this.name, newAmount, zutaten);
+        return new Rezeptverwaltung.Rezept(this.name, newAmount, zutaten);
     }
   */
 }
